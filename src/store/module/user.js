@@ -110,6 +110,7 @@ export default {
       return new Promise((resolve, reject) => {
         try {
           getUserInfo(state.token).then(res => {
+          	console.log('用户信息数据', res)
             const data = res.data
             commit('setAvatar', data.avatar)
             commit('setUserName', data.name)

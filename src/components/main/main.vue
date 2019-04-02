@@ -112,7 +112,8 @@ export default {
       'handleLogin',
       'getUnreadMessageCount'
     ]),
-    turnToPage (route) {
+    turnToPage (route) {		// 菜单页面点击事件
+    	console.log(333, route)
       let { name, params, query } = {}
       if (typeof route === 'string') name = route
       else {
@@ -130,7 +131,7 @@ export default {
         query
       })
     },
-    handleCollapsedChange (state) {
+    handleCollapsedChange (state) {		// 侧边导航开关状态
       this.collapsed = state
     },
     handleCloseTag (res, type, route) {

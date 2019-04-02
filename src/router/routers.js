@@ -51,6 +51,36 @@ export default [
     ]
   },
   {
+    path: '',
+    name: 'doc',
+    meta: {
+      title: '文档',
+      href: 'https://lison16.github.io/iview-admin-doc/#/',
+      icon: 'ios-book',
+      hideInMenu: true
+    }
+  },
+  {
+    path: '/join',
+    name: 'join',
+    component: Main,
+    meta: {
+      hideInBread: true,
+      hideInMenu: true
+    },
+    children: [
+      {
+        path: 'join_page',
+        name: 'join_page',
+        meta: {
+          icon: '_qq',
+          title: 'QQ群'
+        },
+        component: () => import('@/view/join-page.vue')
+      }
+    ]
+  },
+  {
     path: '/message',
     name: 'message',
     component: Main,
@@ -75,7 +105,8 @@ export default [
     name: 'components',
     meta: {
       icon: 'logo-buffer',
-      title: '组件'
+      title: '组件',
+      hideInMenu: true
     },
     component: Main,
     children: [
@@ -194,7 +225,8 @@ export default [
     name: 'update',
     meta: {
       icon: 'md-cloud-upload',
-      title: '数据上传'
+      title: '数据上传',
+      hideInMenu: true
     },
     component: Main,
     children: [
@@ -223,7 +255,8 @@ export default [
     name: 'excel',
     meta: {
       icon: 'ios-stats',
-      title: 'EXCEL导入导出'
+      title: 'EXCEL导入导出',
+      hideInMenu: true
     },
     component: Main,
     children: [
@@ -251,7 +284,8 @@ export default [
     path: '/tools_methods',
     name: 'tools_methods',
     meta: {
-      hideInBread: true
+      hideInBread: true,
+      hideInMenu: true
     },
     component: Main,
     children: [
@@ -271,7 +305,8 @@ export default [
     path: '/i18n',
     name: 'i18n',
     meta: {
-      hideInBread: true
+      hideInBread: true,
+      hideInMenu: true
     },
     component: Main,
     children: [
@@ -290,7 +325,8 @@ export default [
     path: '/error_store',
     name: 'error_store',
     meta: {
-      hideInBread: true
+      hideInBread: true,
+      hideInMenu: true
     },
     component: Main,
     children: [
@@ -329,7 +365,8 @@ export default [
     path: '/directive',
     name: 'directive',
     meta: {
-      hideInBread: true
+      hideInBread: true,
+      hideInMenu: true
     },
     component: Main,
     children: [
